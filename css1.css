@@ -1,0 +1,22 @@
+
+
+.banner-img {
+    width: 1400px;
+    height: 150px;
+    
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+.text-overlay {
+    position: absolute;
+    top: 20%;
+    font-size: 15px;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    color: white;
+}
