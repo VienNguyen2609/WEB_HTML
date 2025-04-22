@@ -4,21 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="nguyenbavien" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="Untitled-1.css">
+    <title>HomePage</title>
+    <link rel="stylesheet" href="untitled1.css">
 </head>
 
 <body>
 
     <!-- PHẦN HEADER -->
-    <header>
+    <header class="header-container">
         <img src="Image/logoshop.png" alt="Logo" class="logo">
-        <div class="search">
-            <input type="text" id="search" placeholder="Search..." class="search input">
-            <h1 class="Item">
-                0 Item($)-$0.00
-            </h1>
+        
+        <div class="search-bar">
+            <div class="search-box">
+                <input type="text" placeholder="Search..." class="search-input">
+                <select class="category-select">
+                    <option>Categories</option>
+                    <option>Men</option>
+                    <option>Books</option>
+                </select>
+            </div>
+            <button class="search-button">
+                <img src="Image/search-icon.png" alt="Search" class="search-icon">
+            </button>
         </div>
+    
+        <h1 class="Item">0 Item($) - $0.00</h1>
     </header>
 
     <!-- PHẦN MENU (NAVIGATION) -->

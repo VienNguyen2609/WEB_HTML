@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+  <title>Sắp xếp từ theo Alphabet</title>
+</head>
+<body>
+  <h2>Nhập câu để sắp xếp từ theo thứ tự Alphabet</h2>
+  <input type="text" id="inputSentence" placeholder="Nhập câu..." size="50">
+  <button onclick="sortWords()">Sắp xếp</button>
+  <p id="result"></p>
+
+  <script>
+    function sortWords() {
+      const input = document.getElementById("inputSentence").value.trim();
+      
+      // Tách từ theo khoảng trắng, loại bỏ từ trống nếu có
+      let words = input.split(/\s+/).filter(word => word.length > 0);
+
+      // Kiểm tra điều kiện số lượng từ và độ dài từ
+      if (words.length > 20) {
+        alert("Câu không được quá 20 từ!");
+        return;
+      }
+      for (let word of words) {
+        if (word.length > 10) {
+          alert("Mỗi từ không được quá 10 ký tự!");
+          return;
+        }
+      }
+
+      // Sắp xếp theo thứ tự alphabet (không phân biệt chữ hoa/thường)
+      words.sort((a, b) => a.localeCompare(b));
+
+      // Hiển thị kết quả
+      document.getElementById("result").innerText = words.join(" ");
+    }
+  </script>
+</body>
+</html>

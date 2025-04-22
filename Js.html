@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm từ</title>
+</head>
+<body>
+    <form>
+        <label>Nhập chuỗi:</label>
+        <input type="text" id="inputString" maxlength="255"><br><br>
+        <label>Số từ có 4 ký tự:</label>
+        <input type="text" id="output" readonly><br><br>
+        <button type="button" onclick="demTu()">Tìm</button>
+        <button type="reset">Hủy bỏ</button>
+    </form>
+
+    <script>
+        function demTu() {
+            let chuoi = document.getElementById("inputString").value;
+            let tu = chuoi.split(/\s+/); // Tách từ theo khoảng trắng
+            let dem = 0;
+
+            for (let i = 0; i < tu.length; i++) {
+                if (tu[i].length === 4 && tu[i].toLowerCase().startsWith('m')) {
+                    dem++;
+                }
+            }
+
+            document.getElementById("output").value = dem;
+        }
+    </script>
+</body>
+</html>
